@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 04-15-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Monitoramento da Safra" icon-name="custom:custom5">
+        <div class="slds-p-around_medium">
+            <template if:true={daysRemaining}>
+                <p class="slds-text-heading_small slds-m-bottom_small">
+                    Faltam <strong>{daysRemaining}</strong> dias para a colheita!
+                </p>
+                <lightning-progress-bar 
+                    value={progressValue} 
+                    size="large" 
+                    variant="circular">
+                </lightning-progress-bar>
+            </template>
+        </div>
+    </lightning-card>
+</template>
